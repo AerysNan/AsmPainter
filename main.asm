@@ -18,7 +18,11 @@ WinMain proc hInst:HINSTANCE,hPrevInst:HINSTANCE,CmdLine:LPSTR,CmdShow:DWORD
     mov ebx,OFFSET CanvasProc
     invoke GetStockObject,WHITE_BRUSH
     invoke CreateWindowClass,hInst,ebx,addr CanvasClass,eax,0
+<<<<<<< HEAD
     invoke CreateWindowEx,0,addr WindowClass,addr WindowName,WS_OVERLAPPEDWINDOW and not WS_MAXIMIZEBOX and not WS_THICKFRAME,0,0,WNDWIDTH,WNDHEIGHT,0,0,hInst,0  
+=======
+    invoke CreateWindowEx,0,addr WindowClass,addr WindowName,WS_OVERLAPPEDWINDOW and not WS_MAXIMIZEBOX and not WS_THICKFRAME,0,0,1500,1000,0,0,hInst,0  
+>>>>>>> enable save file
     mov hWndMainWindow,eax
     invoke CreateWindowEx,0,addr ButtonClass,addr PencilName,WS_CHILD or WS_VISIBLE or BS_DEFPUSHBUTTON or BS_ICON,0,0,FUNCBTNSIZE,FUNCBTNSIZE,hWndMainWindow,PencilID,hInst,0
     mov hWndPencil,eax
